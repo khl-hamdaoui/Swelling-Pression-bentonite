@@ -37,7 +37,7 @@ def user_input_features():
     PL= st.sidebar.number_input('Plastic limit [%]', value=220)
     PI= st.sidebar.selectbox('Plasticity index  [%] ', 40)
     Wi  = st.sidebar.number_input('Initial water content [%]', value=15)
-    γd  = st.sidebar.number_input('Dry unit weight  [g.m-3] ', value=1.6)
+    gamma_d  = st.sidebar.number_input('Dry unit weight  [g.m-3] ', value=1.6)
     
     data = {
         'Mt.c': Mt.c,
@@ -45,7 +45,7 @@ def user_input_features():
         'PL': PL,
         'PI': PI,
         'Wi': Wi,
-        'γd': γd 
+        'gamma_d': gamma_d 
     }
     features = pd.DataFrame(data, index=[0])
     return features
