@@ -1,2 +1,2 @@
-# Swelling-Pression-bentonite
-Swelling-Pression-bentonite
+# example-regression-streamlit
+Une app de regression
