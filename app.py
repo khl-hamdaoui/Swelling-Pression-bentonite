@@ -10,7 +10,6 @@ scalers = {
 
 
 models = {
-    'LinearRegression': pickle.load(open('LinearRegression_StandardScaler.pkl', 'rb')),
     'Ridge': pickle.load(open('Ridge_StandardScaler.pkl', 'rb')),
     'Lasso': pickle.load(open('Lasso_StandardScaler.pkl', 'rb')),
     'DecisionTreeRegressor': pickle.load(open('DecisionTreeRegressor_StandardScaler.pkl', 'rb')),
