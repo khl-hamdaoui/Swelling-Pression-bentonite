@@ -8,13 +8,17 @@ scalers = {
     'RobustScaler': pickle.load(open('RobustScaler.pkl', 'rb'))
 }
 
+
 models = {
     'LinearRegression': pickle.load(open('LinearRegression_StandardScaler.pkl', 'rb')),
     'Ridge': pickle.load(open('Ridge_StandardScaler.pkl', 'rb')),
     'Lasso': pickle.load(open('Lasso_StandardScaler.pkl', 'rb')),
     'DecisionTreeRegressor': pickle.load(open('DecisionTreeRegressor_StandardScaler.pkl', 'rb')),
     'RandomForestRegressor': pickle.load(open('RandomForestRegressor_StandardScaler.pkl', 'rb')),
-    # 'GradientBoostingRegressor': pickle.load(open('GradientBoostingRegressor_StandardScaler.pkl', 'rb')),
+    'GradientBoostingRegressor': pickle.load(open('GradientBoostingRegressor_StandardScaler.pkl', 'rb')),
+    'CatBoostRegressor': pickle.load(open('CatBoostRegressor_StandardScaler.pkl', 'rb')),
+    'XGBRegressor': pickle.load(open('XGBRegressor_StandardScaler.pkl', 'rb')),
+
     'SVR': pickle.load(open('SVR_StandardScaler.pkl', 'rb'))
 }
 
@@ -55,7 +59,7 @@ if st.button('Predict'):
     st.subheader('Prediction Results')
     st.write(f'Model used: **{model_choice}**')
     st.write(f'Scaler used: **{scaler_choice}**')
-    st.write(f'MEDV (Median value of owner-occupied homes in k dollars ): ** {prediction[0]:.2f} k dollars')
+    st.write(f'Swelling Pressure ): ** {prediction[0]:.2f} [Mpa]')
 st.markdown(
     """
     <style>
